@@ -15,8 +15,13 @@ export default createStore({
   },
   actions: {
     async fetchCategories ({ commit }) {
-      const res = await axios.get(`${apiUrl}/categories`)
-      commit('UPDATE_CATEGORIES', res.data)
+      try {
+        const res = await axios.get(`${apiUrl}/categories`)
+        commit('UPDATE_CATEGORIES', res.data)
+      } catch (error) {
+        console.error('Network Error:', error)
+        commit('SET_ERROR', error)
+      }
     }
   },
   modules: {
