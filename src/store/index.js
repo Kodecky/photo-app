@@ -7,6 +7,9 @@ export default createStore({
     categories: []
   },
   getters: {
+    categories (state) {
+      return state.categories
+    }
   },
   mutations: {
     UPDATE_CATEGORIES (state, data) {

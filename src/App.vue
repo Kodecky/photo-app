@@ -3,6 +3,7 @@
     <div class="container p-p-4">
 
       <app-header class="header p-mt-2 p-mb-2"/>
+      <categories-list class="content p-mt-2 p-mb-2"/>
 
       <main>
         <router-view />
@@ -20,12 +21,14 @@
 import { mapActions } from 'vuex'
 import AppHeader from '@/components/layout/theHeader'
 import AppFooter from '@/components/layout/theFooter'
+import CategoriesList from '@/components/features/CategoriesList'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    CategoriesList
   },
   created () {
     this.fetchCategories()

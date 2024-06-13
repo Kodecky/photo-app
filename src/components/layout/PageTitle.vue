@@ -13,7 +13,6 @@ export default {
 <style lang="scss">
 .page-title {
   color: #637892;
-  margin: 2rem;
   font-size: 18px;
 }
 </style>
