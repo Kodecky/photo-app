@@ -11,6 +11,10 @@ export default createStore({
   mutations: {
     UPDATE_CATEGORIES (state, data) {
       state.categories = data
+    },
+    SET_ERROR (state, error) {
+      // Optionally handle the error state
+      console.error('Vuex Error:', error)
     }
   },
   actions: {
